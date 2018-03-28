@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>Title:</strong>
   <%= @blog.title %>
 </p>
@@ -11,4 +11,28 @@
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'Back', blogs_path %> -->
+<div class="container" style="margin-top: 60px">
+	<div class="row">
+	
+		<div class="col-md-8">
+			<div class="card">
+				<div class="card-content">
+					<p style="font-size: 20px"><strong> <%= @blog.title %> </strong></p>
+					<hr>
+					<p style="font-size: 14px"><%= @blog.content %></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-content">
+
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</div>
