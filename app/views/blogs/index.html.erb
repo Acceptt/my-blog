@@ -48,7 +48,7 @@
                   <div class="card">
                     <div class="card-content">
                       <strong><p style="font-size: 20px"><%= blog.title %></p></strong>
-                      <p><%= blog.created_at %></p>
+                      <p><%= time_ago_in_words(blog.created_at) %></p>
                       <hr>
                       <p style="font-size: 14px"><%= blog.content %></p>
                       <p style=""><%= link_to 'Show', blog, class: 'btn btn-primary', style:'color:#fff' %></p>
@@ -66,8 +66,8 @@
                     <div class="card-content">
                     <p style="font-size: 20px;color: #f34826"><b>TRENDING</b></p>
                     <hr>
-                    <% @blogs.each do |blog| %>
-                      <strong><a href="/blogs/<%= blog.id %>" style="font-size: 14px;"><%= blog.title %></a></strong>
+                    <% @blogs.limit(6).each do |blog| %>
+                     <a href="/blogs/<%= blog.id %>" style="font-size: 14px;"><%= blog.title %></a>
                       <hr>
                       <% end %>
                     </div>

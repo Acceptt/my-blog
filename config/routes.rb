@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'login/add/' => 'login#add'
   post 'login/create/user' => 'login#create_user'
   get 'dashboard' => 'dashboard#index'
-
+  get 'berita' => 'dashboard#berita'
 
 
   resources :blogs

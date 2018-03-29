@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
   def index
-  	@blogs = Blog.all
+  	
+  end
+
+  def berita
+  	@blogs = Blog.page(params[:page])
   end
 end
